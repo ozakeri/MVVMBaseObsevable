@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="main"
+            type="com.example.myapplication.viewmodel.MainViewModel"/>
+
+        <variable
+            name="user"
+            type="com.example.myapplication.viewmodel.UserViewModel"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:setUpRecycler="@{user.userViewModelArrayList}"/>
+
+    </RelativeLayout>
+
+</layout>
